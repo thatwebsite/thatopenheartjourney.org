@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+<section class="journey">
+  <div class="wrap">
+    <div class="journey-head rise">
+      <p class="eyebrow">{{ .Params.eyebrow }}</p>
+      <h2 class="h2">{{ .Title }}</h2>
+      {{ .Content }}
+    </div>
+
+    {{ range .Pages.ByWeight }}
+    <div class="stage s-{{ .Params.tone | default "dark" }} rise">
+      <div class="stage-when">{{ .Params.when }}</div>
+      <div>
+        <div class="stage-what"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+        <p class="stage-note">{{ .Summary }}</p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}

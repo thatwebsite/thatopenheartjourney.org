@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">{{ .Params.eyebrow }}</p>
+    <h1 class="hero-line">{{ .Params.hero_line | safeHTML }}</h1>
+
+    <div class="seal" id="seal" aria-hidden="true">
+      <span></span><i class="gap"></i><span></span>
+      <i class="patch"></i>
+    </div>
+
+    <p class="hero-sub">{{ .Params.hero_sub }}</p>
+
+    <div class="cta-row">
+      <a href="{{ "/basics/" | relURL }}" class="btn btn-solid">Start with the basics</a>
+      <a href="{{ "/story/" | relURL }}" class="btn btn-ghost">Read what happened to me</a>
+    </div>
+  </div>
+</header>
+
+<section class="explain">
+  <div class="wrap">
+    <div class="rise narrow">
+      <p class="eyebrow">In plain words</p>
+      <h2 class="h2">What an ASD actually is</h2>
+      {{ .Content }}
+      <p><a href="{{ "/basics/" | relURL }}" class="btn btn-ghost" style="margin-top:10px">Read the full explanation</a></p>
+    </div>
+  </div>
+</section>
+
+{{ end }}

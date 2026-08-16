@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+{{ if .Params.cta_text }}
+<section class="help">
+  <div class="wrap">
+    <div class="rise">
+      <h2 class="h2">{{ .Title }}</h2>
+      {{ .Content }}
+      <a href="mailto:{{ site.Params.contactEmail }}" class="btn btn-ink">{{ .Params.cta_text }}</a>
+    </div>
+  </div>
+</section>
+{{ else }}
+<section class="after">
+  <div class="wrap narrow">
+    <div class="rise">
+      {{ with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+      <h2 class="h2">{{ .Title }}</h2>
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ end }}

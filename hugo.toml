@@ -1,0 +1,40 @@
+baseURL = 'https://thatopenheartjourney.org/'
+locale = 'en-us'
+title = 'That Open Heart Journey'
+
+# Pretty URLs like /basics/, /story/the-scan/
+uglyURLs = false
+
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  tagline = "for anyone who was just told they have a hole in their heart"
+  contactEmail = "hello@thatopenheartjourney.org"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[[menu.main]]
+  name = "Basics"
+  url = "/basics/"
+  weight = 10
+
+[[menu.main]]
+  name = "My Story"
+  url = "/story/"
+  weight = 20
+
+[[menu.main]]
+  name = "Questions"
+  url = "/questions/"
+  weight = 30
+
+[[menu.main]]
+  name = "Recovery"
+  url = "/recovery/"
+  weight = 40
+
+[[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 50

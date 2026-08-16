@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<section class="ask">
+  <div class="wrap">
+    <div class="rise">
+      <p class="eyebrow">{{ .Params.eyebrow }}</p>
+      <h2 class="h2">{{ .Title }}</h2>
+      <p class="lede">{{ .Params.lede }}</p>
+    </div>
+
+    <div class="qlist">
+      {{ range .Params.qa }}
+      <div class="q rise">
+        <p class="q-text">{{ .q }}</p>
+        <p class="q-why">{{ .why }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}

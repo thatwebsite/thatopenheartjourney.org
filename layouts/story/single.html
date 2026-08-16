@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<section class="story-single">
+  <div class="wrap narrow">
+    <div class="rise">
+      <p class="eyebrow">{{ .Params.when }}</p>
+      <h2 class="h2">{{ .Title }}</h2>
+      <div class="content">{{ .Content }}</div>
+
+      <div class="story-nav">
+        {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Params.when }}</a>{{ else }}<span></span>{{ end }}
+        <a href="{{ "/story/" | relURL }}">All of the story</a>
+        {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Params.when }} &rarr;</a>{{ else }}<span></span>{{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

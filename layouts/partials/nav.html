@@ -1,0 +1,10 @@
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="{{ "/" | relURL }}" class="site-mark">That Open Heart Journey</a>
+    <ul class="site-links">
+      {{ range site.Menus.main }}
+      <li><a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} class="is-active"{{ end }}>{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</nav>

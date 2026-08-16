@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<section class="explain">
+  <div class="wrap" style="padding-top:clamp(56px,10vh,96px)">
+    <div class="rise" style="margin-bottom:8px">
+      <p class="eyebrow">{{ .Params.eyebrow }}</p>
+      <h2 class="h2">{{ .Title }}</h2>
+    </div>
+    <div class="explain-grid">
+      <div class="rise">
+        {{ .Content }}
+      </div>
+      <div class="rise">
+        <dl class="facts">
+          {{ range .Params.facts }}
+          <dt>{{ .term }}</dt>
+          <dd>{{ .detail }}</dd>
+          {{ end }}
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
